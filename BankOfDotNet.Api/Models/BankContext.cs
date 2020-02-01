@@ -9,7 +9,7 @@ namespace BankOfDotNet.Api.Models
 {
     public class BankContext : DbContext
     {
-        public BankContext(DbContextOptions<DbContext> options) : base(options)
+        public BankContext(DbContextOptions<BankContext> options) : base(options)
         { 
         }
 
