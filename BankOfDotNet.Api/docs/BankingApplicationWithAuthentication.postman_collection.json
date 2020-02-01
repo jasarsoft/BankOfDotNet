@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "503b02ca-c42c-4df9-b07a-9c6845a28ad4",
+		"name": "BankingApplicationWithAuthentication",
+		"description": "BankOfDotNet Web API\n\nEndpoints:\n\nGetAllCustomers api/Customers GET \nGetSpecificCustomer api/Customers/3 GET \nUpdateCustomer api/Customer/3 PUT CustomerObject\nCreateCustomer api/Customer POST CustomerObject\nDeleteCustomer api/Customer/3 DELETE ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:63504/api/customers GetAllCustomers",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImU4ZjI4M2U0ZjgzYjRjNjI0OTNiYjBiMjU2NGZkOGFhIiwidHlwIjoiSldUIn0.eyJuYmYiOjE1MzQxNDI5MTEsImV4cCI6MTUzNDE0NjUxMSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAwIiwiYXVkIjpbImh0dHA6Ly9sb2NhbGhvc3Q6NTAwMC9yZXNvdXJjZXMiLCJiYW5rT2ZEb3ROZXRBcGkiXSwiY2xpZW50X2lkIjoiY2xpZW50Iiwic2NvcGUiOlsiYmFua09mRG90TmV0QXBpIl19.CwmOWIWhLEMNsyq27_JJUbpSav9R4m3i5nuY_zEreWyx-4f7dpIB3qUBlIuhuE1Byr5DJ0mioqhoQvMxr020O_-WwPqhOJa98ux-DWsIRvnM5Kn5Pbogap5BNkwjTMg40ZplMxUN2Yyg0_CrGvDYKEhRNFNHDZJj0X7PihLV2d9sNfqlkexbhov5-OwD3s57ZGxIeNWC0m4nJuYHsVLwcnaQ48Gbg-Wl_FYf62Ba31UfJHvg8v_hij-WjUj1p4drSzipZLWf5QQ9hbio_jqkzDqmZJhmRMuRzDDdFuxqrh8yb2lfOrrIPMCA5vVYby3uYNJfOtYINewb7Y0m5GadWw"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:59337/api/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "59337",
+					"path": [
+						"api",
+						"customers"
+					]
+				},
+				"description": "Get All Customers"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:63504/api/customers/3 GetCustomer",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImU4ZjI4M2U0ZjgzYjRjNjI0OTNiYjBiMjU2NGZkOGFhIiwidHlwIjoiSldUIn0.eyJuYmYiOjE1MzQxNDI5MTEsImV4cCI6MTUzNDE0NjUxMSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAwIiwiYXVkIjpbImh0dHA6Ly9sb2NhbGhvc3Q6NTAwMC9yZXNvdXJjZXMiLCJiYW5rT2ZEb3ROZXRBcGkiXSwiY2xpZW50X2lkIjoiY2xpZW50Iiwic2NvcGUiOlsiYmFua09mRG90TmV0QXBpIl19.CwmOWIWhLEMNsyq27_JJUbpSav9R4m3i5nuY_zEreWyx-4f7dpIB3qUBlIuhuE1Byr5DJ0mioqhoQvMxr020O_-WwPqhOJa98ux-DWsIRvnM5Kn5Pbogap5BNkwjTMg40ZplMxUN2Yyg0_CrGvDYKEhRNFNHDZJj0X7PihLV2d9sNfqlkexbhov5-OwD3s57ZGxIeNWC0m4nJuYHsVLwcnaQ48Gbg-Wl_FYf62Ba31UfJHvg8v_hij-WjUj1p4drSzipZLWf5QQ9hbio_jqkzDqmZJhmRMuRzDDdFuxqrh8yb2lfOrrIPMCA5vVYby3uYNJfOtYINewb7Y0m5GadWw"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:59337/api/customers/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "59337",
+					"path": [
+						"api",
+						"customers",
+						"3"
+					]
+				},
+				"description": "Get All Customers"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:63504/api/customers DeleteCustomer",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImU4ZjI4M2U0ZjgzYjRjNjI0OTNiYjBiMjU2NGZkOGFhIiwidHlwIjoiSldUIn0.eyJuYmYiOjE1MzQxNDI5MTEsImV4cCI6MTUzNDE0NjUxMSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAwIiwiYXVkIjpbImh0dHA6Ly9sb2NhbGhvc3Q6NTAwMC9yZXNvdXJjZXMiLCJiYW5rT2ZEb3ROZXRBcGkiXSwiY2xpZW50X2lkIjoiY2xpZW50Iiwic2NvcGUiOlsiYmFua09mRG90TmV0QXBpIl19.CwmOWIWhLEMNsyq27_JJUbpSav9R4m3i5nuY_zEreWyx-4f7dpIB3qUBlIuhuE1Byr5DJ0mioqhoQvMxr020O_-WwPqhOJa98ux-DWsIRvnM5Kn5Pbogap5BNkwjTMg40ZplMxUN2Yyg0_CrGvDYKEhRNFNHDZJj0X7PihLV2d9sNfqlkexbhov5-OwD3s57ZGxIeNWC0m4nJuYHsVLwcnaQ48Gbg-Wl_FYf62Ba31UfJHvg8v_hij-WjUj1p4drSzipZLWf5QQ9hbio_jqkzDqmZJhmRMuRzDDdFuxqrh8yb2lfOrrIPMCA5vVYby3uYNJfOtYINewb7Y0m5GadWw"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:59337/api/customers/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "59337",
+					"path": [
+						"api",
+						"customers",
+						"1"
+					]
+				},
+				"description": "Get All Customers"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:63504/api/customers UpdateCustomer",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImU4ZjI4M2U0ZjgzYjRjNjI0OTNiYjBiMjU2NGZkOGFhIiwidHlwIjoiSldUIn0.eyJuYmYiOjE1MzQxNDI5MTEsImV4cCI6MTUzNDE0NjUxMSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAwIiwiYXVkIjpbImh0dHA6Ly9sb2NhbGhvc3Q6NTAwMC9yZXNvdXJjZXMiLCJiYW5rT2ZEb3ROZXRBcGkiXSwiY2xpZW50X2lkIjoiY2xpZW50Iiwic2NvcGUiOlsiYmFua09mRG90TmV0QXBpIl19.CwmOWIWhLEMNsyq27_JJUbpSav9R4m3i5nuY_zEreWyx-4f7dpIB3qUBlIuhuE1Byr5DJ0mioqhoQvMxr020O_-WwPqhOJa98ux-DWsIRvnM5Kn5Pbogap5BNkwjTMg40ZplMxUN2Yyg0_CrGvDYKEhRNFNHDZJj0X7PihLV2d9sNfqlkexbhov5-OwD3s57ZGxIeNWC0m4nJuYHsVLwcnaQ48Gbg-Wl_FYf62Ba31UfJHvg8v_hij-WjUj1p4drSzipZLWf5QQ9hbio_jqkzDqmZJhmRMuRzDDdFuxqrh8yb2lfOrrIPMCA5vVYby3uYNJfOtYINewb7Y0m5GadWw"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Id\": 2,\n\t\"FirstName\": \"XYZ\",\n\t\"LastName\": \"PRQ\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:59337/api/customers/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "59337",
+					"path": [
+						"api",
+						"customers",
+						"2"
+					]
+				},
+				"description": "Get All Customers"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:63504/api/customers CreateCustomer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImU4ZjI4M2U0ZjgzYjRjNjI0OTNiYjBiMjU2NGZkOGFhIiwidHlwIjoiSldUIn0.eyJuYmYiOjE1MzQxNDI5MTEsImV4cCI6MTUzNDE0NjUxMSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAwIiwiYXVkIjpbImh0dHA6Ly9sb2NhbGhvc3Q6NTAwMC9yZXNvdXJjZXMiLCJiYW5rT2ZEb3ROZXRBcGkiXSwiY2xpZW50X2lkIjoiY2xpZW50Iiwic2NvcGUiOlsiYmFua09mRG90TmV0QXBpIl19.CwmOWIWhLEMNsyq27_JJUbpSav9R4m3i5nuY_zEreWyx-4f7dpIB3qUBlIuhuE1Byr5DJ0mioqhoQvMxr020O_-WwPqhOJa98ux-DWsIRvnM5Kn5Pbogap5BNkwjTMg40ZplMxUN2Yyg0_CrGvDYKEhRNFNHDZJj0X7PihLV2d9sNfqlkexbhov5-OwD3s57ZGxIeNWC0m4nJuYHsVLwcnaQ48Gbg-Wl_FYf62Ba31UfJHvg8v_hij-WjUj1p4drSzipZLWf5QQ9hbio_jqkzDqmZJhmRMuRzDDdFuxqrh8yb2lfOrrIPMCA5vVYby3uYNJfOtYINewb7Y0m5GadWw"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Id\": 2,\n\t\"FirstName\": \"Manish\",\n\t\"LastName\": \"Narayan\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:59337/api/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "59337",
+					"path": [
+						"api",
+						"customers"
+					]
+				},
+				"description": "Get All Customers"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
