@@ -28,7 +28,7 @@ namespace BankOfDotNet.IdentityServer
                     {
                         new Secret("secret".Sha256())
                     },
-                    AllowedScopes = {"BankOfDotNetApi"}
+                    AllowedScopes = {"bankOfDotNetApi"}
                 }
             };
         }
