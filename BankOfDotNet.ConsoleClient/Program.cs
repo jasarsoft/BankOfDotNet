@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 using IdentityModel.Client;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace BankOfDotNet.ConsoleClient
 {
@@ -33,7 +36,33 @@ namespace BankOfDotNet.ConsoleClient
             Console.WriteLine(tokenResponse.Json);
             Console.WriteLine("\n\n");
 
+            //cosumer our Customer API
+            var client = new HttpClient();
+            client.SetBearerToken(tokenResponse.AccessToken);
 
+            var customerInfo = new StringContent(
+                JsonConvert.SerializeObject(
+                    new {Id = 10, FirstName = "Manish", LastName = "Narayan"}),
+                    Encoding.UTF8, "application/json");
+
+            var createCustomerResponse = await client.PostAsync("http://localhost:63504/api/customers", customerInfo);
+            if (!createCustomerResponse.IsSuccessStatusCode)
+            {
+                Console.WriteLine(createCustomerResponse.StatusCode);
+            }
+
+            var getCustomerResponse = await client.GetAsync("http://localhost:63504/api/customers");
+            if (!getCustomerResponse.IsSuccessStatusCode)
+            {
+                Console.WriteLine(getCustomerResponse.StatusCode);
+            }
+            else
+            {
+                var content = await getCustomerResponse.Content.ReadAsStringAsync();
+                Console.WriteLine(JArray.Parse(content));
+            }
+
+            Console.Read();
         }
     }
 }
