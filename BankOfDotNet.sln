@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankOfDotNet.IdentityServer
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankOfDotNet.ConsoleClient", "BankOfDotNet.ConsoleClient\BankOfDotNet.ConsoleClient.csproj", "{9A429A25-76DE-4F79-86D4-A525201C6607}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankOfDotNet.MvcClient", "BankOfDotNet.MvcClient\BankOfDotNet.MvcClient.csproj", "{436D0D29-C61F-4D1B-8E38-BD89EF263B6A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankOfDotNet.MvcClient", "BankOfDotNet.MvcClient\BankOfDotNet.MvcClient.csproj", "{80DE8F6E-7054-462B-AF1B-C089FCFBA1EB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{9A429A25-76DE-4F79-86D4-A525201C6607}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A429A25-76DE-4F79-86D4-A525201C6607}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A429A25-76DE-4F79-86D4-A525201C6607}.Release|Any CPU.Build.0 = Release|Any CPU
-		{436D0D29-C61F-4D1B-8E38-BD89EF263B6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{436D0D29-C61F-4D1B-8E38-BD89EF263B6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{436D0D29-C61F-4D1B-8E38-BD89EF263B6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{436D0D29-C61F-4D1B-8E38-BD89EF263B6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80DE8F6E-7054-462B-AF1B-C089FCFBA1EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80DE8F6E-7054-462B-AF1B-C089FCFBA1EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80DE8F6E-7054-462B-AF1B-C089FCFBA1EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80DE8F6E-7054-462B-AF1B-C089FCFBA1EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
