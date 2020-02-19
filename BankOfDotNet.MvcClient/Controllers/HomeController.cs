@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using BankOfDotNet.MvcClient.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BankOfDotNet.MvcClient.Controllers
 {
@@ -30,6 +31,12 @@ namespace BankOfDotNet.MvcClient.Controllers
         }
 
         public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        [Authorize]
+        public IActionResult Secure()
         {
             return View();
         }
