@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.Swagger;
 
 namespace BankOfDotNet.Api
@@ -41,7 +42,7 @@ namespace BankOfDotNet.Api
 
             services.AddSwaggerGen(options =>
             {
-                options.SwaggerDoc("v1", new Info { Title = "BankOfDotNet API", Version = "v1"});
+                options.SwaggerDoc("v1", new OpenApiInfo { Title = "BankOfDotNet API", Version = "v1"});
             });
         }
 
