@@ -75,15 +75,15 @@ namespace BankOfDotNet.IdentityServer
         {
             using (var serviceScope = app.ApplicationServices.GetService<IServiceScopeFactory>().CreateScope())
             {
-                serviceScope.ServiceProvider.GetRequiredService<PersistedGrantDbContext>().Database.Migrate();
+                //serviceScope.ServiceProvider.GetRequiredService<PersistedGrantDbContext>().Database.Migrate();
 
                 var context = serviceScope.ServiceProvider.GetRequiredService<ConfigurationDbContext>();
-                context.Database.Migrate();
+                //context.Database.Migrate();
 
                 //seed the data
                 if (!context.Clients.Any())
                 {
-                    foreach (var client in Config.GetClients())
+                    foreach (var client in Config.GetClients().Where(c => c.ClientId == "swaggerapiui"))
                     {
                         context.Clients.Add(client.ToEntity());
                     }
