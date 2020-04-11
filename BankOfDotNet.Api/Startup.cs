@@ -43,6 +43,22 @@ namespace BankOfDotNet.Api
             services.AddSwaggerGen(options =>
             {
                 options.SwaggerDoc("v1", new OpenApiInfo { Title = "BankOfDotNet API", Version = "v1"});
+                options.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme
+                {
+                    Type = SecuritySchemeType.OAuth2,
+                    Flows = new OpenApiOAuthFlows
+                    {
+                        Implicit = new OpenApiOAuthFlow
+                        {
+                            AuthorizationUrl = new Uri("http://localhost:5000/connect/authorize"),
+                            TokenUrl = new Uri("http://localhost:5000/connect/token"),
+                            Scopes = new Dictionary<string, string>()
+                            {
+                                { "bankOfDotNetApi", "Customer API for BankOfDotNet" }
+                            }
+                        }                     
+                    },                   
+                });
             });
         }
 
@@ -70,6 +86,8 @@ namespace BankOfDotNet.Api
             app.UseSwaggerUI(options =>
             {
                 options.SwaggerEndpoint("/swagger/v1/swagger.json", "BankOfDotNet API V1");
+                options.OAuthClientId("swaggerapiui");
+                options.OAuthAppName("Swagger API UI");
             });
         }
     }
